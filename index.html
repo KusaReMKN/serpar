@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>直列システム・並列システム 信頼度計算機</title>
+<script src="./js/script.js" defer></script>
+</head>
+<body>
+<header>
+<h1>直列システム・並列システム 信頼度計算機</h1>
+<p></p>
+</header>
+<main>
+<form id="setting">
+<fieldset>
+<legend>設定をしよう</legend>
+<div>
+<label for="system">システム構成:</label>
+<select id="system">
+<option value="ser">4 つの直列</option>
+<option value="par">4 つの並列</option>
+<option value="parser">並列の直列</option>
+<option value="serpar">直列の並列</option>
+</select>
+</div>
+<hr>
+<div>
+<label for="lambda1">1 番の λ:</label>
+<input type="range" id="lambda1" min="0.0" max="1.0" step="0.1" value="0.5">
+<output id="lambda1out"></output>
+</div>
+<div>
+<label for="lambda2">2 番の λ:</label>
+<input type="range" id="lambda2" min="0.0" max="1.0" step="0.1" value="0.5">
+<output id="lambda2out"></output>
+</div>
+<div>
+<label for="lambda3">3 番の λ:</label>
+<input type="range" id="lambda3" min="0.0" max="1.0" step="0.1" value="0.5">
+<output id="lambda3out"></output>
+</div>
+<div>
+<label for="lambda4">4 番の λ:</label>
+<input type="range" id="lambda4" min="0.0" max="1.0" step="0.1" value="0.5">
+<output id="lambda4out"></output>
+</div>
+</fieldset>
+</form>
+<div>
+<h2>システム構成図</h2>
+<img id="figure">
+</div>
+<canvas id="canvas" width="640" height="480"></canvas>
+</main>
+</body>
+</html>
